@@ -7,13 +7,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="408dp"
+        android:layout_height="205dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="2dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="366dp"
+            android:layout_height="51dp">
+
+            <TextView
+                android:layout_width="344dp"
+                android:layout_height="36dp"
+                android:text="Faça seu pedido!"
+                android:textSize="24sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="380dp"
+            android:layout_height="41dp"
+            android:hint="Nome" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
