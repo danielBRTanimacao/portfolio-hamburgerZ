@@ -18,8 +18,8 @@
 
         <TextView
             style="@style/EstiloTexto"
-            android:layout_width="344dp"
-            android:layout_height="36dp"
+
+
             android:text="@string/make_your_order"
             android:textSize="24sp" />
 
@@ -97,8 +97,6 @@
         <TextView
             android:id="@+id/textView3"
             style="@style/EstiloTexto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="@string/summary_order" />
 
         <LinearLayout
@@ -109,8 +107,6 @@
             <TextView
                 android:id="@+id/textView4"
                 style="@style/EstiloTexto"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="@string/currency_symbol"
                 android:textSize="20sp" />
@@ -118,11 +114,8 @@
             <TextView
                 android:id="@+id/textView5"
                 style="@style/EstiloTexto"
-                android:layout_width="89dp"
-                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="@string/value_final"
-                 />
+                android:text="@string/value_final" />
         </LinearLayout>
 
         <Button
