@@ -13,13 +13,14 @@
         android:orientation="vertical"
         android:translationX="25dp"
         android:translationY="25dp"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="2dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            style="@style/EstiloTexto"
             android:layout_width="344dp"
             android:layout_height="36dp"
-            android:text="Faça seu pedido!"
+            android:text="@string/make_your_order"
             android:textSize="24sp" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -29,39 +30,40 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nome" />
+                android:hint="@string/name" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <CheckBox
                 android:id="@+id/checkBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bacon" />
+                android:text="@string/bacon" />
 
             <CheckBox
                 android:id="@+id/checkBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Queijo" />
+                android:text="@string/cheese" />
 
             <CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Onion Rings" />
+                android:text="@string/onion_rings" />
 
         </RadioGroup>
 
         <TextView
             android:id="@+id/textView"
+            style="@style/EstiloTexto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quantidade" />
+            android:text="@string/quantity" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,14 +74,15 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:text="@string/minus"
                 app:cornerRadius="8dp" />
 
             <TextView
                 android:id="@+id/textView2"
+                style="@style/EstiloTexto"
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@string/value_quantity"
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
@@ -87,15 +90,16 @@
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
+                android:text="@string/plus"
                 app:cornerRadius="8dp" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView3"
+            style="@style/EstiloTexto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Resumo do pedido" />
+            android:text="@string/summary_order" />
 
         <LinearLayout
             android:layout_width="120dp"
@@ -104,26 +108,28 @@
 
             <TextView
                 android:id="@+id/textView4"
+                style="@style/EstiloTexto"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_weight="1"
-                android:text="R$"
+                android:text="@string/currency_symbol"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView5"
+                style="@style/EstiloTexto"
                 android:layout_width="89dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="0"
-                android:textSize="20dp" />
+                android:text="@string/value_final"
+                 />
         </LinearLayout>
 
         <Button
             android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fazer pedido" />
+            android:text="@string/make_your_order" />
 
     </LinearLayout>
 
