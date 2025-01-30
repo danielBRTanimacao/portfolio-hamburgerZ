@@ -8,9 +8,8 @@
     <string name="quantity">Quantidade</string>
     <string name="summary_order">Resumo do pedido</string>
     <string name="place_order">Fazer pedido</string>
-    <string name="currency_symbol">R$</string>
+    <string name="currency_symbol">R$0</string>
     <string name="value_quantity">0</string>
-    <string name="value_final">0</string>
     <string name="plus">+</string>
     <string name="minus">-</string>
 </resources>

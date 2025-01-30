@@ -4,30 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:translationX="25dp"
-        android:translationY="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:contentDescription="banner-burger"
+            app:srcCompat="@drawable/burgbg" />
+
         <TextView
             style="@style/EstiloTexto"
-
-
-            android:text="@string/make_your_order"
-            android:textSize="24sp" />
+            android:text="@string/make_your_order" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/UserName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name" />
@@ -35,23 +39,24 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <RadioGroup
+            android:id="@+id/GroupCheckBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/Bacon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/bacon" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/Cheese"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/cheese" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/OnionRings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/onion_rings" />
@@ -61,8 +66,6 @@
         <TextView
             android:id="@+id/textView"
             style="@style/EstiloTexto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="@string/quantity" />
 
         <LinearLayout
@@ -72,26 +75,20 @@
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/minus"
-                app:cornerRadius="8dp" />
+                style="@style/EstiloBtn"
+                android:onClick="subtractBtn"
+                android:text="@string/minus" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/QuantityBurger"
                 style="@style/EstiloTexto"
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:text="@string/value_quantity"
-                android:textAlignment="center"
-                android:textSize="16sp" />
+                android:text="@string/value_quantity" />
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/plus"
-                app:cornerRadius="8dp" />
+                style="@style/EstiloBtn"
+                android:onClick="sumBtn"
+                android:text="@string/plus" />
         </LinearLayout>
 
         <TextView
@@ -99,29 +96,17 @@
             style="@style/EstiloTexto"
             android:text="@string/summary_order" />
 
-        <LinearLayout
-            android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView4"
-                style="@style/EstiloTexto"
-                android:layout_weight="1"
-                android:text="@string/currency_symbol"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView5"
-                style="@style/EstiloTexto"
-                android:layout_weight="1"
-                android:text="@string/value_final" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/Result"
+            style="@style/EstiloTexto"
+            android:text="@string/currency_symbol" />
 
         <Button
             android:id="@+id/button4"
+            style="@style/EstiloBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="sendRequest"
             android:text="@string/make_your_order" />
 
     </LinearLayout>
